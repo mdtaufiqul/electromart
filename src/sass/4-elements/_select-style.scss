@@ -1,0 +1,429 @@
+.select1_inner {
+    position: relative;
+    background: #fff;
+    border: 1px solid transparent;
+    position: relative;
+}
+
+.select1_inner:after {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 7px;
+    background: url(../images/a1.png) 0 0 no-repeat;
+    position: absolute;
+    right: 10px;
+    top: 17px;
+}
+
+.select2 {
+    width: 100%;
+}
+
+.select2 *:focus {
+    outline: none!important;
+}
+
+.select2-container--default .select2-results>.select2-results__options {
+    max-height: 500px;
+    overflow: hidden;
+}
+
+.select2-container--default .select2-selection--single {
+    background: none;
+    position: relative;
+    font-size: 14px;
+}
+
+.select2-container--default .select2-selection--single {
+    border: none;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.502);
+}
+
+.select2_inner .select2-container--default .select2-selection--single .select2-selection__rendered {
+    padding-left: 0;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+    display: none;
+}
+
+.select2-dropdown {
+    background: none;
+    border-radius: 0;
+    z-index: 10;
+    min-width: 0px;
+}
+
+.select2-container--open .select2-dropdown--below {
+    border: none;
+}
+
+.select2-results__option {
+    padding: 10px 5px 10px 15px;
+    background: $primary-color;
+    font-size: 14px;
+    line-height: 20px;
+    color: rgba(0, 0, 0, 0.502);
+    border-top: 1px solid $primary-color;
+}
+
+.select2-results__option:first-child {
+    border-top: none;
+}
+
+.small .select2-results__option {
+    padding-left: 0;
+}
+
+.select2-container--default .select2-results__option[aria-selected=true] {
+    background: #fff;
+    color: $primary-color;
+}
+
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+    background: #fff;
+    color: $primary-color;
+}
+
+// range slider
+.rt-widget,
+.widget {
+    .ui-slider {
+        position: relative;
+    }
+    .ui-widget.ui-widget-content {
+        background: #eee;
+        border: medium none;
+        border-radius: 0px;
+        height: 3px;
+    }
+    .ui-state-default,
+    .ui-widget-content .ui-state-default,
+    .ui-widget-header .ui-state-default,
+    .ui-button {
+        background: #000;
+        border: medium none;
+        height: 15px;
+        width: 15px;
+        border-radius: 0;
+    }
+    html .ui-button.ui-state-disabled:hover,
+    html .ui-button.ui-state-disabled:active {
+        background: #000 none repeat scroll 0 0;
+        border: medium none;
+        border-radius: 100%;
+    }
+    .ui-widget-header {
+        background: #000;
+    }
+    .ui-slider-range.ui-corner-all.ui-widget-header {
+        background: pink;
+    }
+    .price_slider_amount {
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+    .price_slider_amount input {
+        display: inline-block;
+    }
+    .ui-slider-horizontal .ui-slider-handle {
+        top: -7px;
+        border-radius: 50%;
+        //border: 3px solid #fff;
+        //box-shadow: 0.5px 0.866px 7px 3px rgba($primary-color, 0.75);
+        &:focus {
+            outline: none;
+        }
+    }
+    .price_slider_amount input.amount {
+        border: medium none;
+        width: 100px;
+        background-color: transparent;
+        &:focus {
+            border: none;
+            outline: none;
+        }
+    }
+    .ui-slider-horizontal .ui-slider-range {
+        height: 100%;
+        top: 0px;
+    }
+}
+
+.tippy-tooltip {
+    font-family: $body-font !important;
+    padding: 8px 20px !important;
+    font-size: 14px !important;
+}
+
+.ui-datepicker {
+    .ui-datepicker-header {
+        background: $gradient-primary;
+        color: #fff;
+    }
+    .ui-state-highlight,
+    .ui-widget-content .ui-state-highlight,
+    .ui-widget-header .ui-state-highlight {
+        background: $gradient-primary;
+        border: 1px solid $primary-color;
+        color: #fff;
+    }
+    .ui-state-active,
+    .ui-widget-content .ui-state-active,
+    .ui-widget-header .ui-state-active {
+        background: $gradient-primary;
+        border: 1px solid $primary-color;
+        opacity: 0.7;
+    }
+}
+
+// qantity style
+.single-product-form.rt-form {
+    #{$all-text-inputs},
+    .form-control {
+        height: 42px;
+    }
+}
+
+.rt-increment-container {
+    position: relative;
+    max-width: 81px;
+    margin-right: 30px;
+    input[type="text"] {
+        display: block;
+        width: 81px;
+        height: 46px;
+        border: 1px solid rgba(#000, 0.2);
+        color: rgba(#000, 0.7);
+        position: relative;
+        &::placeholder {
+            color: rgba(#000, 0.4);
+        }
+    }
+    .qty {
+        height: 42px;
+        position: relative;
+        padding: 0;
+        text-align: center;
+    }
+    button {
+        position: absolute;
+        left: 0px;
+        top: 50%;
+        transform: translateY(-50%);
+        border: 1px solid rgba(#000, 0);
+        background: transparent;
+        text-align: center;
+        color: rgba(#000, 0.5);
+        &:hover {
+            color: rgba(#000, 1);
+        }
+        &.cart-qty-minus {
+            left: auto;
+            right: 0px;
+        }
+    }
+}
+
+// icheck css 
+.icheck-material-rtblack>input:first-child {
+    background-color: #000;
+}
+
+.icheck-material-rtblack>input:first-child::-ms-check {
+    background-color: #000;
+}
+
+.icheck-material-rtblack>input:first-child:not(:checked):not(:disabled):hover+label::before,
+.icheck-material-rtblack>input:first-child:not(:checked):not(:disabled):hover+input[type="hidden"]+label::before {
+    border-color: #000;
+}
+
+.icheck-material-rtblack>input:first-child:checked+label::before,
+.icheck-material-rtblack>input:first-child:checked+input[type="hidden"]+label::before {
+    background-color: #000;
+    border-color: #000;
+}
+
+.icheck-material-rtblack>input:first-child:checked+label::after,
+.icheck-material-rtblack>input:first-child:checked+input[type="hidden"]+label::after {
+    border-bottom-color: #fff;
+    border-right-color: #fff;
+}
+
+.icheck-material-rtblack>input:first-child+label::before,
+.icheck-material-rtblack>input:first-child+input[type="hidden"]+label::before {
+    border: 2px solid #000;
+    background: #000;
+}
+
+//-----------------------------
+.icheck-material-rtwhite>input:first-child {
+    background-color: #f9f5f5;
+}
+
+.icheck-material-rtwhite>input:first-child::-ms-check {
+    background-color: #f9f5f5;
+}
+
+.icheck-material-rtwhite>input:first-child:not(:checked):not(:disabled):hover+label::before,
+.icheck-material-rtwhite>input:first-child:not(:checked):not(:disabled):hover+input[type="hidden"]+label::before {
+    border-color: #f9f5f5;
+}
+
+.icheck-material-rtwhite>input:first-child:checked+label::before,
+.icheck-material-rtwhite>input:first-child:checked+input[type="hidden"]+label::before {
+    background-color: #f9f5f5;
+    border-color: #f9f5f5;
+}
+
+.icheck-material-rtwhite>input:first-child:checked+label::after,
+.icheck-material-rtwhite>input:first-child:checked+input[type="hidden"]+label::after {
+    border-bottom-color: #000;
+    border-right-color: #000;
+}
+
+.icheck-material-rtwhite>input:first-child+label::before,
+.icheck-material-rtwhite>input:first-child+input[type="hidden"]+label::before {
+    border: 2px solid #f9f5f5;
+    background: #f9f5f5;
+}
+
+//-----------------------------
+.icheck-material-rtyellow>input:first-child {
+    background-color: #ffc52a;
+}
+
+.icheck-material-rtyellow>input:first-child::-ms-check {
+    background-color: #ffc52a;
+}
+
+.icheck-material-rtyellow>input:first-child:not(:checked):not(:disabled):hover+label::before,
+.icheck-material-rtyellow>input:first-child:not(:checked):not(:disabled):hover+input[type="hidden"]+label::before {
+    border-color: #ffc52a;
+}
+
+.icheck-material-rtyellow>input:first-child:checked+label::before,
+.icheck-material-rtyellow>input:first-child:checked+input[type="hidden"]+label::before {
+    background-color: #ffc52a;
+    border-color: #ffc52a;
+}
+
+.icheck-material-rtyellow>input:first-child:checked+label::after,
+.icheck-material-rtyellow>input:first-child:checked+input[type="hidden"]+label::after {
+    border-bottom-color: #fff;
+    border-right-color: #fff;
+}
+
+.icheck-material-rtyellow>input:first-child+label::before,
+.icheck-material-rtyellow>input:first-child+input[type="hidden"]+label::before {
+    border: 2px solid #ffc52a;
+    background: #ffc52a;
+}
+
+.icheck-material-blue>input:first-child {
+    background-color: #ffc52a;
+}
+
+.icheck-material-blue>input:first-child::-ms-check {
+    background-color: #ffc52a;
+}
+
+.icheck-material-blue>input:first-child:not(:checked):not(:disabled):hover+label::before,
+.icheck-material-blue>input:first-child:not(:checked):not(:disabled):hover+input[type="hidden"]+label::before {
+    border-color: #ffc52a;
+}
+
+.icheck-material-blue>input:first-child:checked+label::before,
+.icheck-material-blue>input:first-child:checked+input[type="hidden"]+label::before {
+    background-color: #ffc52a;
+    border-color: #ffc52a;
+}
+
+.icheck-material-blue>input:first-child:checked+label::after,
+.icheck-material-blue>input:first-child:checked+input[type="hidden"]+label::after {
+    border-bottom-color: #fff;
+    border-right-color: #fff;
+}
+
+.icheck-material-blue>input[type="radio"]:first-child:checked+label::after,
+.icheck-material-blue>input[type="radio"]:first-child:checked+input[type="hidden"]+label::after {
+    background-color: #ffc52a;
+}
+
+//-----------------------------
+.icheck-material-rtgray>input:first-child {
+    background-color: #c4c4c4;
+}
+
+.icheck-material-rtgray>input:first-child::-ms-check {
+    background-color: #c4c4c4;
+}
+
+.icheck-material-rtgray>input:first-child:not(:checked):not(:disabled):hover+label::before,
+.icheck-material-rtgray>input:first-child:not(:checked):not(:disabled):hover+input[type="hidden"]+label::before {
+    border-color: #c4c4c4;
+}
+
+.icheck-material-rtgray>input:first-child:checked+label::before,
+.icheck-material-rtgray>input:first-child:checked+input[type="hidden"]+label::before {
+    background-color: #c4c4c4;
+    border-color: #c4c4c4;
+}
+
+.icheck-material-rtgray>input:first-child:checked+label::after,
+.icheck-material-rtgray>input:first-child:checked+input[type="hidden"]+label::after {
+    border-bottom-color: #000;
+    border-right-color: #000;
+}
+
+.icheck-material-rtgray>input:first-child+label::before,
+.icheck-material-rtgray>input:first-child+input[type="hidden"]+label::before {
+    border: 2px solid #c4c4c4;
+    background: #c4c4c4;
+}
+
+.wo-widget {
+    [class*="icheck-material"]>input:first-child+label::before,
+    [class*="icheck-material"]>input:first-child+input[type="hidden"]+label::before {
+        border-radius: 50%;
+    }
+    .icheck-material-rtblack>input:first-child:checked+input[type="hidden"]+label::after,
+    .icheck-material-rtblack>input:first-child:checked+label::after {
+        top: 1px;
+        left: 1px;
+    }
+    .icheck-material-rtwhite>input:first-child:checked+input[type="hidden"]+label::after,
+    .icheck-material-rtwhite>input:first-child:checked+label::after {
+        top: 1px;
+        left: 1px;
+    }
+    .icheck-material-rtyellow>input:first-child:checked+input[type="hidden"]+label::after,
+    .icheck-material-rtyellow>input:first-child:checked+label::after {
+        top: 1px;
+        left: 1px;
+    }
+    .icheck-material-rtgray>input:first-child:checked+input[type="hidden"]+label::after,
+    .icheck-material-rtgray>input:first-child:checked+label::after {
+        top: 1px;
+        left: 1px;
+    }
+    [class*="icheck-material"]>input[type="checkbox"]:first-child:checked+input[type="hidden"]+label::after,
+    [class*="icheck-material"]>input[type="checkbox"]:first-child:checked+label::after {
+        height: 13px;
+        width: 6px;
+    }
+    [class*="icheck-material"]>label {
+        padding-left: 40px !important;
+    }
+    [class*="icheck-material"]>input:first-child+input[type="hidden"]+label::before,
+    [class*="icheck-material"]>input:first-child+label::before {
+        margin-left: -40px !important;
+    }
+}
+

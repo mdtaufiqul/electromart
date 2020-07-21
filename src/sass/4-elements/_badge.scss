@@ -1,0 +1,10 @@
+.rt-gradinet-badge {
+    background: linear-gradient(35deg, #9932f5 0%, #4933f1 53%, #4950f8 70%, #496cfe 100%);
+    color: #fff;
+    padding: 6px 16px;
+    font-size: 16px;
+    font-weight: 400;
+    &.pill {
+        border-radius: 999px;
+    }
+}

@@ -1,0 +1,355 @@
+html {
+    height: 100%;
+    font-size: 62.5%;
+    @include breakpoint(lg) {
+        font-size: 60%;
+    }
+    @include breakpoint(md) {
+        font-size: 55%;
+    }
+    @include breakpoint(xs) {
+        font-size: 50%
+    }
+    @media only screen and (max-width: 479px) {
+        font-size: 45%;
+    }
+    @include breakpoint(xss) {
+        font-size: 40%;
+    }
+}
+
+// heading
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    font-family: $heading-font;
+    color: $headnig-font-color;
+}
+
+h1,
+.h1 {
+    font-size: 42px;
+    @include breakpoint(md) {
+        font-size: 40px;
+    }
+    @include breakpoint(xs) {
+        font-size: 38px;
+    }
+}
+
+h2,
+.h2 {
+    font-size: 38px;
+    @include breakpoint(md) {
+        font-size: 36px;
+    }
+    @include breakpoint(xs) {
+        font-size: 34px;
+    }
+}
+
+h3,
+.h3 {
+    font-size: 30px;
+    @include breakpoint(md) {
+        font-size: 28px;
+    }
+    @include breakpoint(xs) {
+        font-size: 25px;
+    }
+}
+
+h4,
+.h4 {
+    font-size: 25px;
+    @include breakpoint(md) {
+        font-size: 23px;
+    }
+    @include breakpoint(xs) {
+        font-size: 20px;
+    }
+}
+
+h5,
+.h5 {
+    font-size: 18px;
+    text-transform: capitalize;
+}
+
+h6,
+.h6 {
+    font-size: 16px;
+}
+
+p {
+    font-size: $default-font-size;
+    font-family: $body-font;
+    line-height: 26px;
+}
+
+.title-font {
+    font-family: $heading-font !important;
+}
+.body-font{
+    font-family: $body-font !important;
+}
+.text-font {
+    font-family: $body-font !important;
+}
+
+.title-font-2 {
+    font-family: 'Poppins', sans-serif !important;
+}
+.font-nunito{
+    font-family: $custom_font !important;
+}
+.font-Josefin{
+    font-family: $custom_font2 !important;
+}
+
+.rt-section-title {
+    text-transform: capitalize;
+    font-size: 60px;
+    margin: 0 0 20px;
+    font-weight: 700;
+    line-height: 55px;
+    display: inline-block;
+    @include afterparent();
+    @include breakpoint(xs) {
+        font-size: 32px;
+    }
+    span {
+        
+        display: block;
+        font-size: 20px;
+        text-transform: uppercase;
+        font-weight: 800;
+        
+        &.top{
+            margin: 0 0 10px;
+        }
+        &.bottom{
+            margin: 10px 0 0 ;
+        }
+        @include breakpoint(xs) {
+            font-size: 14px;
+        }
+    }
+}
+.rt-column-title{
+    @extend .rt-section-title;
+    font-size: 40px;
+    @include breakpoint(xs){
+        font-size: 32px;
+        line-height: 42px;
+    }
+}
+
+.text-white {
+    .rt-section-title {
+        color: #ffffff;
+        span {
+            color: #fff;
+        }
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: #fff;
+        }
+    }
+}
+
+.text-white2 {
+    .rt-section-title {
+        color: #ffffff;
+        span {
+            color: #496cfe;
+        }
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: #fff;
+    }
+    p {
+        color: #fff;
+    }
+}
+
+.rt-black {
+    font-weight: 800;
+}
+
+.rt-strong {
+    font-weight: 700;
+}
+
+.rt-medium {
+    font-weight: 500;
+}
+
+.rt-semiblod {
+    font-weight: 600;
+}
+
+.rt-light1 {
+    font-weight: 100;
+}
+
+.rt-light2 {
+    font-weight: 200;
+}
+
+.rt-light3 {
+    font-weight: 300;
+}
+
+.underline {
+    text-decoration: underline;
+}
+.positon-parent{
+    position: relative;
+    z-index: 1;
+}
+.rt-watter-mark {
+    position: absolute;
+    font-family: 'Playfair Display', serif;
+    font-size: 300px;
+    color: #eff3ee;
+    width: 100%;
+    font-weight: 900;
+    top: 67px;
+    text-align: center;
+    @include breakpoint(xl) {
+        font-size: 250px;
+    }
+    @include breakpoint(lg) {
+        font-size: 200px;
+        top: 87px;
+    }
+    @include breakpoint(md) {
+        font-size: 200px;
+        line-height: 200px;
+        top: 0px;
+    }
+    @include breakpoint(xs) {
+        font-size: 120px;
+        line-height: 120px;
+        top: -49px;
+    }
+}
+
+@for $i from 0 through 10 {
+    .rt-lettersp-#{$i} {
+        letter-spacing: $i + px;
+    }
+}
+
+.badge-hilighit {
+    position: relative;
+    display: inline-block;
+    padding: 10px 40px;
+}
+
+.badge-hilighit:before {
+    border-bottom: 18px solid transparent;
+    border-left: 7px solid #fff;
+    border-top: 18px solid transparent;
+    content: "";
+    height: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: rotate(180deg);
+    width: 0;
+}
+
+.badge-hilighit.color--1 {
+    background: #f0a736;
+}
+
+.badge-hilighit.color--2 {
+    background: linear-gradient(8deg, #9932f5 0%, #7133f3 17%, #4933f1 45%, #4950f8 71%, #496cfe 100%);
+}
+.rt-section-title.title_restaurent{
+    font-size: 50px;
+    font-weight: 900;
+    @include breakpoint(xs){
+        font-size: 36px;
+    }
+}   
+
+@for $i from 0 through 100 {
+    .f-size-#{$i} {
+        font-size: $i + px;
+    }
+}
+
+@media (max-width: 1199.98px) {
+    @for $i from 0 through 100 {
+        .f-size-lg-#{$i} {
+            font-size: $i + px;
+        }
+    }
+}
+
+@media (max-width: 991.98px) {
+    @for $i from 0 through 100 {
+        .f-size-md-#{$i} {
+            font-size: $i + px;
+        }
+    }
+}
+
+@media (max-width: 767.98px) {
+    @for $i from 0 through 100 {
+        .f-size-xs-#{$i} {
+            font-size: $i + px;
+        }
+    }
+}
+
+@for $i from 0 through 100 {
+    .line-height-#{$i} {
+        line-height: $i + px;
+    }
+}
+
+@media (max-width: 1199.98px) {
+    @for $i from 0 through 100 {
+        .line-height-lg-#{$i} {
+            line-height: $i + px;
+        }
+    }
+}
+
+@media (max-width: 991.98px) {
+    @for $i from 0 through 100 {
+        .line-height-md-#{$i} {
+            line-height: $i + px;
+        }
+    }
+}
+
+@media (max-width: 767.98px) {
+    @for $i from 0 through 100 {
+        .line-height-xs-#{$i} {
+            line-height: $i + px;
+        }
+    }
+}

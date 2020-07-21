@@ -1,0 +1,59 @@
+$theme-colors: () !default;
+$theme-colors: map-merge(("Primary__color": $primary-color, "Secondary__color": $secondary-color, ), $theme-colors);
+:root {
+    @each $color,
+    $value in $theme-colors {
+        --#{$color}: #{$value};
+    }
+}
+
+// color
+.primary-color,
+a.primary-color {
+    color: $primary-color;
+}
+
+.secondary-color,
+a.secondary-color {
+    color: $secondary-color;
+}
+
+.primary-color-bg {
+    background-color: $primary-color;
+}
+
+.secondary-color-bg {
+    background-color: $secondary-color;
+}
+
+
+
+
+.body-font-color {
+    color: $body-font-colr;
+}
+
+.heading-font-color {
+    color: $headnig-font-color;
+}
+
+a.heading-font-color {
+    &:hover {
+        color: $primary-color;
+    }
+}
+
+// text gradinet color 
+.text-gradinet-1 {
+    background: $gradient-primary;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.bg-gradient-primary {
+    background: $gradient-primary;
+}
+
+
+
+

@@ -1,0 +1,15 @@
+
+
+.single-progress{
+    .progress{
+        background: #e1e1e4;
+        height: 10px;
+        border-radius: 999px;
+    .progress-bar{
+        @extend .bg-gradient-primary;
+    }
+    }
+}
+
+
+

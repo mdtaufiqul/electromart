@@ -1,0 +1,136 @@
+/* Recent Posts */
+.rt-widget-recent-posts {
+  ul {
+      margin: 0;
+      padding: 0;
+    li {
+      display: flex;
+      margin-bottom: 15px;
+      a {
+        margin: 0;
+      }
+      img {
+        min-width: 60px;
+        width: 60px;
+        display: block;
+        height: 60px;
+        object-fit: cover;
+        margin-right: 15px;
+      }
+      .widget-posts-descr {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: auto;
+        .title {
+          font-size: 14px;
+          margin: 0;
+          font-weight: 600;
+          display: block;
+          border: 0;
+          text-decoration: none;
+          margin-top: 0px;
+          font-family: $body-font;
+          color: #30323d;
+          line-height: 16px;
+          &:hover{
+            color: $primary-color;
+          }
+        }
+        .date {
+          font-size: 14px;
+          color: #797e82;
+          margin-top: 5px;
+          display: block;
+        }
+      }
+    }
+
+  }
+}
+
+
+
+/* Flickr Widget */
+.rt_flickr_widget {
+
+  ul {
+    margin: 0 -5px;
+    display: flex;
+    list-style-type: none;
+    flex-wrap: wrap;
+    li {
+      display: block;
+      padding: 5px;
+      width: 33.3%;
+      position: relative;
+      &:after {
+        padding-bottom: 100%;
+        display: block;
+        content: "";
+      }
+      a {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        padding: 0;
+        display: block;
+        width: calc(100% - 10px);
+        height: calc(100% - 10px);
+        img {
+          max-width: 100%;
+          min-width: 100%;
+          min-height: 100%;
+          object-fit: cover;
+          height: auto;
+          display: block;
+        }
+        video {
+          max-width: 100%;
+          height: auto;
+          display: block;
+        }
+        .hover {
+          background: rgba(0, 0, 0, .75);
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 20px;
+          color: #fff;
+          transition: 0.3s all ease;
+          opacity: 0;
+          text-align: center;
+          i, .fa, .fab {
+            transition: 0.35s all ease;
+            transform: scale(0.7);
+            opacity: 0.30;
+          }
+        }
+        &:hover {
+          .hover {
+            opacity: 1;
+            i, .fa, .fab {
+              transform: scale(1);
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Instagram Widget */
+.rt_instagram_widget {
+  @extend .rt_flickr_widget
+}

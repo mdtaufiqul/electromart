@@ -1,0 +1,78 @@
+/**!
+
+    Template Name: RainyTheme Starter
+    Template URI: https://themeforest.net/user/rainytheme
+    Description:
+    Author: mahedi amin
+    Author URI: https://themeforest.net/user/rainytheme
+    Version: 1.0.0
+    -------------------------------------------------
+
+   ---- Deafult--------
+       1.0 Root Css
+       1.1 Default Css
+       1.2 typography Css
+   ---- Layout--------
+       2.0 Banner Css
+       2.1 IconBox Css
+       2.3 portfolio Css
+       2.4 testimonials Css
+       2.5 Callto Action Css
+       2.6 counter-styleCss
+   ---- Menu And Nav Tools--------
+       3.0 Menu Css
+   ---- Elements Css--------
+       4.0 Acrodain Css
+       4.1 Animation Css
+       4.2 Button Css
+       4.3 Bredcump Css
+       4.4 Pagination Css
+       4.5 rt-socials Css
+        4.6 modal css
+        4.7 form css
+        4.8 select2 css
+        4.9 datepicker css
+        4.10 alert css
+        4.11 badge css
+        4.12 icon css
+        4.13 progress css
+        4.14 preloder css
+
+   ---- Blog Sidebar Comments--------
+       5.0 Blog Css
+
+    ---- Header Footer--------
+        6.0 Header Css
+        6.1 Footer Css
+      
+
+
+
+
+    -----------------------------------------------------
+   
+    
+**/
+
+// Setting sass
+@import "setting";
+//mixin sass
+@import "allmixin";
+// plugin root sass
+@import "0-plugin/plugin-root";
+//base sass
+@import "1-default/default-root";
+// layout root sass
+@import "2-layout/layout-root";
+// menu root sass
+@import "3-menu/menu-root";
+// elements root sass
+@import "4-elements/elements-root";
+// elements root sass
+@import "5-wpblog/wpblog-root";
+// elements root sass
+@import "6-header-footer/_header-footer-root";
+
+
+
+

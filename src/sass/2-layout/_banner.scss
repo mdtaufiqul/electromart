@@ -1,0 +1,75 @@
+.single-rt-banner {
+    @include afterparent();
+    background-color: gray;
+    .rt-inner-overlay {
+        z-index: 0;
+    }
+   
+}
+
+.rt-banner-height {
+    height: 750px;
+}
+
+
+
+
+.rt-slider-active {
+    .slick-next,
+    .slick-prev {
+        position: absolute;
+        right: 160px;
+        @include breakpoint(xxl){
+            right: 0;
+        }
+        text-align: center;
+        color: #000;
+        z-index: 66;
+        cursor: pointer;
+        background-color: #fff;
+        box-shadow: 0px 11px 29px 0px rgba(64, 65, 91, 0.11);
+        border-radius: 50%;
+        @include hw(50px);
+        top: 50%;
+        transform: translateX(-50%);
+        opacity: 1;
+        @include rt-trs(0.2s);
+        &::before {
+            color: #000;
+            font-family: "icofont";
+            opacity: 1;
+            font-size: 25px;
+            @include rt-trs(0.2s);
+            line-height: 50px;
+            @include breakpoint(xs){
+                font-size: 16px;
+                line-height: 35px;
+            }
+        }
+        @include breakpoint(xs){
+            @include hw(35px);
+            
+        }
+        &:hover {
+            background-color: $primary-color;
+            &::before {
+                opacity: 1;
+                color: #fff;
+            }
+        }
+    }
+    .slick-prev {
+        left: auto;
+        margin-top: 60px;
+        &::before {
+            content: '\ea9d';
+        }
+    }
+    .slick-next {
+        &::before {
+            content: '\eaa0';
+        }
+    }
+}
+
+  
