@@ -54,3 +54,50 @@
         }
     }
 }
+
+
+// feature product 
+.rt-single-icon-box{
+    &.featre-product{
+        background-color: #f7f7f7;
+        min-height: 351px;
+        padding-left: 50px;
+        justify-content: flex-end;
+        .icon-thumb{
+            position: absolute;
+            right: 30px;
+            top: 75px;
+        }
+        .iconbox-content{
+            padding-bottom: 58px;
+            .badge-1, .badge-2{
+                @include hw(58px);
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                font-size: 14px;
+                text-align: center;
+                color: #fff;
+                margin-bottom: 37px;
+            }
+            .badge-1{
+                background-image: url(../images/all-img/sp2.png);
+            }
+            .badge-2{
+                background-image: url(../images/all-img/sp3.png);
+            }
+            h4{
+                font-size: 25px;
+                text-transform: capitalize;
+                margin: 0 0 15px;
+                a{
+                    color: #000;
+                }
+            }
+            p{
+                font-size: 15px;
+                color: #888888;
+                margin: 0 0 0;
+            }
+        }
+    }
+}
