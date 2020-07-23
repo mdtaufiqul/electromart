@@ -150,33 +150,33 @@ function imagetask() {
 
 function copyfonts() {
     return src(files.fonts_path)
-        .pipe(gulp.dest(files.output + "/" + "assets/fonts"))
+        .pipe(dest(files.output + "/" + "assets/fonts"))
         .pipe(browserSync.stream());
 }
 
 function copycss() {
     return src(files.css_path)
-        .pipe(gulp.dest(files.output + "/" + "assets/css"))
+        .pipe(dest(files.output + "/" + "assets/css"))
         .pipe(browserSync.stream());
 }
 
 function copyjs(){
-    return gulp.src(files.plugins_path)
-        .pipe(gulp.dest(files.output + "/" + "assets/js"))
+    return src(files.plugins_path)
+        .pipe(dest(files.output + "/" + "assets/js"))
         .pipe(browserSync.stream());
 }
 
 
 function copyjs2(){
-    return gulp.src(files.jquery_js_path)
-        .pipe(gulp.dest(files.output + "/" + "assets/js"))
+    return src(files.jquery_js_path)
+        .pipe(dest(files.output + "/" + "assets/js"))
         .pipe(browserSync.stream());
 }
 
 
 function copysass(){
-    return gulp.src(files.sass_path)
-        .pipe(gulp.dest(files.output + "/" + "assets/sass"))
+    return src(files.sass_path)
+        .pipe(dest(files.output + "/" + "assets/sass"))
         .pipe(browserSync.stream());
 }
 

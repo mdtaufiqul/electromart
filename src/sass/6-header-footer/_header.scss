@@ -34,6 +34,15 @@
             width: 100%;
             z-index: 99;
             box-shadow: 0px 2px 3px 0px rgba(#000, 0.1);
+            top: 0;
+            .top-header{
+                position: absolute;
+                width: 100%;
+                left: 0;
+                transform: translateY(-150px);
+                transition: all 0.3s ease-in-out;
+                @include hidden();
+            }
             .brand-logo {
                 max-width: 85px;
             }
@@ -45,6 +54,32 @@
             }
         }
     }
+    .rt-nav-tolls{
+        >span{
+            margin-right: 50px;
+            &:nth-child(3){
+                margin-right: 0px;
+            }
+        }
+    }
     
 }
+.custom-header-container{
+    padding-left: 200px;
+    padding-right: 200px;
+}
 
+// top header css 
+.top-header{
+    .row{
+        border-bottom: 1px solid rgba(#000,  0.102);
+        padding-top: 15px;
+        padding-bottom: 10px;
+    }
+    a{
+        color: #000;
+        &:hover{
+            color: $primary-color;
+        }
+    }
+}

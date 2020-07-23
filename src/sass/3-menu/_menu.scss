@@ -21,6 +21,8 @@
             display: block;
             font-size: $menu_font_size;
             font-family: $menu_font_family;
+            font-weight: 500;
+            text-transform: capitalize;
             @include rt-trs(.3s);
             padding: 0 23px;
             @include breakpoint(xl){
@@ -49,7 +51,7 @@
 
 /*change hover color*/
 .main-menu>ul>li>a{
-    line-height: 111px;
+    line-height: 116px;
     @include breakpoint(md){
         line-height: 1.9;
     }

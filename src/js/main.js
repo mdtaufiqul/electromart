@@ -184,6 +184,14 @@
         /*---------------====================
     03.All  Slider
     ================-------------------*/
+        var $status = $('.numbercount');
+        var $slickElement = $('.rt-slider-active');
+
+        $slickElement.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
+            //currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
+            var i = (currentSlide ? currentSlide : 0) + 1;
+            $status.text('0'+i + '/' + 0+slick.slideCount);
+        });
         if ($(".rt-slider-active").length > 0) {
             $('.rt-slider-active').slick({
 
@@ -191,100 +199,11 @@
                 autoplay: false,
                 fade: true,
                 infinite: true,
+                arrows: false,
+                dots: true,
 
             }).slickAnimation();
         }
-
-        if ($(".testimonails_active").length > 0) {
-            $('.testimonails_active').slick({
-                infinite: true,
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                //autoplay: true,
-                arrows: false,
-                dots: true,
-            });
-        }
-        if ($(".testimonails_active2").length > 0) {
-            $('.testimonails_active2').slick({
-                infinite: true,
-                slidesToShow: 3,
-                slidesToScroll: 1,
-                //autoplay: true,
-                arrows: false,
-                dots: true,
-                responsive: [{
-                        breakpoint: 1024,
-                        settings: {
-                            slidesToShow: 3,
-                            slidesToScroll: 3,
-                            infinite: true,
-                            dots: true
-                        }
-                    },
-                    {
-                        breakpoint: 981,
-                        settings: {
-                            slidesToShow: 2,
-                            slidesToScroll: 2
-                        }
-                    },
-                    {
-                        breakpoint: 768,
-                        settings: {
-                            slidesToShow: 1,
-                            slidesToScroll: 1
-                        }
-                    }
-                ]
-            });
-        }
-        if ($(".testimonails_active3").length > 0) {
-            var islgdevice = $(window).width() < 1199.98 ? false : true;
-            $('.testimonails_active3').slick({
-                infinite: true,
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                //autoplay: true,
-                arrows: islgdevice,
-                dots: !islgdevice,
-
-            });
-        }
-        if ($(".gallery-active").length > 0) {
-            $('.gallery-active').slick({
-                infinite: true,
-                slidesToShow: 4,
-                slidesToScroll: 2,
-                arrows: false,
-                dots: false,
-                responsive: [{
-                        breakpoint: 1024,
-                        settings: {
-                            slidesToShow: 3,
-                            slidesToScroll: 3,
-                            infinite: true,
-                            dots: true
-                        }
-                    },
-                    {
-                        breakpoint: 600,
-                        settings: {
-                            slidesToShow: 2,
-                            slidesToScroll: 2
-                        }
-                    },
-                    {
-                        breakpoint: 480,
-                        settings: {
-                            slidesToShow: 1,
-                            slidesToScroll: 1
-                        }
-                    }
-                ]
-            });
-        }
-
 
         /*---------------====================
     04.Offcanvas

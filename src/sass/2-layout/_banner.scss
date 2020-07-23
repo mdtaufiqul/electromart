@@ -1,27 +1,60 @@
 .single-rt-banner {
-    @include afterparent();
-    background-color: gray;
-    .rt-inner-overlay {
-        z-index: 0;
+    position: relative;
+    .product-image {
+        position: absolute;
+        right: -40px;
+        top: 50%;
+        transform: translateY(-50%);
     }
-   
+    .rt-banner-content {
+        padding-left: 70px;
+        h1 {
+            font-size: 74px;
+            font-weight: 600;
+            margin: 0 0 20px;
+        }
+        p {
+            margin: 0 0 30px;
+            font-size: 25px;
+            line-height: 40px;
+            &:last-child {
+                margin: 0 0 0;
+            }
+        }
+        .rt-btn {
+            padding: 16px 54px;
+            font-size: 20px;
+            font-weight: 500;
+        }
+    }
+}
+
+.rt-banner-area {
+    position: relative;
+    @extend .custom-header-container;
+    .numbercount {
+        position: absolute;
+        right: 120px;
+        bottom: 150px;
+        @include hw(118px);
+        color: #fff;
+        text-align: center;
+        font-size: 25px;
+        z-index: 4;
+        @extend .sp-bg;
+       
+    }
 }
 
 .rt-banner-height {
-    height: 750px;
+    height: 885px;
 }
-
-
-
 
 .rt-slider-active {
     .slick-next,
     .slick-prev {
         position: absolute;
-        right: 160px;
-        @include breakpoint(xxl){
-            right: 0;
-        }
+        left: 0px;
         text-align: center;
         color: #000;
         z-index: 66;
@@ -41,14 +74,13 @@
             font-size: 25px;
             @include rt-trs(0.2s);
             line-height: 50px;
-            @include breakpoint(xs){
+            @include breakpoint(xs) {
                 font-size: 16px;
                 line-height: 35px;
             }
         }
-        @include breakpoint(xs){
+        @include breakpoint(xs) {
             @include hw(35px);
-            
         }
         &:hover {
             background-color: $primary-color;
@@ -59,16 +91,29 @@
         }
     }
     .slick-prev {
-        left: auto;
-        margin-top: 60px;
         &::before {
             content: '\ea9d';
         }
     }
     .slick-next {
+        left: auto;
+        right: 0px;
         &::before {
             content: '\eaa0';
         }
+    }
+    .slick-dots {
+        text-align: right;
+        bottom: 73px;
+        right: 112px;
+    }
+    .slick-dots li button::before {
+        color: rgb(247, 126, 83);
+        font-size: 40px;
+        opacity: 0.2;
+    }
+    .slick-dots li.slick-active button::before {
+        opacity: 1
     }
 }
 

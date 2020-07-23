@@ -197,6 +197,11 @@ blockquote {
     box-shadow: none;
 }
 
+.sp-bg{
+    background-image: url(../images/all-img/sp.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
 @for $i from 0 through 50 {
     .rt-rounded-#{$i} {
         border-radius: $i + px;
