@@ -1,0 +1,104 @@
+// filter nav 
+.filter-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: right;
+    li {
+        display: inline-block;
+    }
+}
+
+// product area 
+.filter-productarea {
+    padding-top: 224px;
+}
+
+// main product 
+.rt-single-icon-box{
+    &.main-product{
+        @include clearfix();
+        .icon-thumb{
+            margin-bottom: 25px;
+            position: relative;
+            img{
+                transition: all 0.34s ease-in-out;
+                &.back-image{
+                    @include hidden();
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                }
+            }
+        }
+        .iconbox-content{
+            text-align: center;
+            padding-bottom: 25px;
+            position: relative;
+            transition: all 0.34s ease-in-out;
+            .addtocart{
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                background-color: $primary-color;
+                color: #fff;
+                padding: 7px 20px;
+                border-radius: 999px;
+                top: -50px;
+                @include hidden();
+                @include ellipsis;
+
+            }
+            h4{
+                font-size: 20px;
+                font-weight: 500;
+                a{
+                    color: #000;
+                    &:hover{
+                        color: $primary-color;
+                    }
+                }
+            }
+        }
+        &:hover{
+            .icon-thumb{
+                img{
+                    &.back-image{
+                        @include vis();
+                    }
+                    
+                }
+            }
+            .iconbox-content{
+                padding-top: 15px;
+                .addtocart{
+                    @include vis();
+                }
+            }
+        }
+    }
+}
+
+// cata product 
+.rt-single-icon-box{
+    &.cata-product{
+        .iconbox-content{
+            position: absolute;
+            left: 0;
+            width: 100%;
+            bottom: 0;
+            padding-left: 55px;
+            padding-bottom: 55px;
+            h3{
+                font-size: 25px;
+                color: $body-font-colr;
+                font-weight: 500;
+            }
+            span{
+                font-size: 20px;
+                color: $body-font-colr;
+            }
+        }
+    }
+}

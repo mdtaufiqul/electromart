@@ -177,6 +177,55 @@
         dots: true
       }).slickAnimation();
     }
+
+    if ($(".brands-active").length > 0) {
+      $('.brands-active').slick({
+        infinite: true,
+        slidesToShow: 6,
+        slidesToScroll: 3,
+        pauseOnHover: true,
+        swipeToSlide: true,
+        arrows: false,
+        dots: false,
+        responsive: [{
+          breakpoint: 1199,
+          settings: {
+            slidesToShow: 4,
+            slidesToScroll: 1
+          }
+        }, {
+          breakpoint: 980,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1
+          }
+        }, {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1
+          }
+        }, {
+          breakpoint: 479,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1
+          }
+        }, {
+          breakpoint: 320,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }, {
+          breakpoint: 210,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }]
+      });
+    }
     /*---------------====================
     04.Offcanvas
     ================-------------------*/
@@ -319,7 +368,7 @@
         percentPosition: true,
         masonry: {
           // use outer width of grid-sizer for columnWidth
-          columnWidth: 1
+          columnWidth: 0
         }
       });
     });

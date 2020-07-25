@@ -111,10 +111,10 @@ p {
 
 .rt-section-title {
     text-transform: capitalize;
-    font-size: 60px;
+    font-size: 45px;
     margin: 0 0 20px;
-    font-weight: 700;
-    line-height: 55px;
+    font-weight: 500;
+    line-height: 58px;
     display: inline-block;
     @include afterparent();
     @include breakpoint(xs) {
@@ -123,7 +123,7 @@ p {
     span {
         
         display: block;
-        font-size: 20px;
+        font-size: 14px;
         text-transform: uppercase;
         font-weight: 800;
         
@@ -133,9 +133,7 @@ p {
         &.bottom{
             margin: 10px 0 0 ;
         }
-        @include breakpoint(xs) {
-            font-size: 14px;
-        }
+        
     }
 }
 .rt-column-title{

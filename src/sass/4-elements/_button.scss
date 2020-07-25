@@ -185,7 +185,19 @@
         color: #fff;
     }
 }
-
+.rt-gray{
+    background: #e5e5e5;
+    border-color: #e5e5e5;
+    color: #000;
+    .btn-revel-effects {
+        background: $primary-color;
+    }
+    &:hover,
+    &:focus,
+    &:active {
+        color: #fff;
+    }
+}
 
 .rt-dark-btn {
     transition: transform 0.3s, opacity 0.3s;

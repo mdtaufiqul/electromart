@@ -175,3 +175,39 @@
         }
     }
 }
+
+// single blog home 
+.single-home-blog{
+    @include afterparent();
+    .rt-post-thumbnail{
+        margin-bottom: 30px;
+    }
+    .entry-title{
+        font-size: 25px;
+        font-weight: 500;
+        color: $body-font-colr;
+        a{
+            color: $body-font-colr;
+            &:hover{
+                color: $primary-color;
+            }
+        }
+    }
+    .entry-content{
+        p{
+            color: #888888;
+        }
+    }
+    .entry-footer{
+        a{
+            color: $body-font-colr;
+        }
+    }
+    &:hover{
+        .entry-footer{
+            a{
+                color: $primary-color;
+            }
+        }
+    }
+}

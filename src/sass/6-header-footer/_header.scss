@@ -40,7 +40,6 @@
                 width: 100%;
                 left: 0;
                 transform: translateY(-150px);
-                transition: all 0.3s ease-in-out;
                 @include hidden();
             }
             .brand-logo {
@@ -71,6 +70,7 @@
 
 // top header css 
 .top-header{
+    transition: all 0.3s ease-in-out;
     .row{
         border-bottom: 1px solid rgba(#000,  0.102);
         padding-top: 15px;
@@ -83,3 +83,5 @@
         }
     }
 }
+
+

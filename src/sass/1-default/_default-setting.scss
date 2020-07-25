@@ -207,6 +207,16 @@ blockquote {
         border-radius: $i + px;
     }
 }
-
+@for $i from 0 through 10 {
+	.rt-mb-#{$i* 10} {
+		margin-bottom: $i * 10px;
+	}
+	.rt-pt-#{$i* 10} {
+		padding-top: $i * 10px;
+    }
+    .rt-spacer-#{$i* 10} {
+		height: $i * 10px;
+	}
+}
 
 @import "custom_column";
