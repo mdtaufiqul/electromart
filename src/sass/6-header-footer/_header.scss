@@ -13,7 +13,7 @@
     .navbar {
         padding: 0;
         transition: .3s ease-in-out;
-        @include breakpoint(md){
+        @include breakpoint(md) {
             padding: 30px 0;
         }
     }
@@ -25,7 +25,7 @@
         z-index: 9;
     }
     .main-menu,
-    .rt-nav-tolls{
+    .rt-nav-tolls {
         transition: all 0.3s ease-in-out;
     }
     &.rt-sticky {
@@ -35,53 +35,87 @@
             z-index: 99;
             box-shadow: 0px 2px 3px 0px rgba(#000, 0.1);
             top: 0;
-            .top-header{
+            .top-header {
                 position: absolute;
                 width: 100%;
                 left: 0;
                 transform: translateY(-150px);
                 @include hidden();
             }
-            .brand-logo {
-                max-width: 85px;
-            }
-            .main-menu>ul>li>a{
+            
+            .main-menu>ul>li>a {
                 line-height: 80px;
-                @include breakpoint(md){
+                @include breakpoint(md) {
                     line-height: 1.9;
                 }
             }
         }
     }
-    .rt-nav-tolls{
-        >span{
+    .rt-nav-tolls {
+        >span {
             margin-right: 50px;
-            &:nth-child(3){
-                margin-right: 0px;
-            }
+           &:last-child{
+               margin-right: 0px;
+           }
+           @include breakpoint(lg){
+               margin-right: 15px;
+           }
         }
     }
-    
 }
-.custom-header-container{
+
+.custom-header-container {
     padding-left: 200px;
     padding-right: 200px;
+    @include breakpoint(xxl){
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+    @include breakpoint(xl){
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 }
 
 // top header css 
-.top-header{
+.top-header {
     transition: all 0.3s ease-in-out;
-    .row{
-        border-bottom: 1px solid rgba(#000,  0.102);
+    .row {
+        border-bottom: 1px solid rgba(#000, 0.102);
         padding-top: 15px;
         padding-bottom: 10px;
     }
-    a{
+    a {
         color: #000;
-        &:hover{
+        &:hover {
             color: $primary-color;
         }
     }
 }
 
-
+.home-two {
+    .main-header {
+        background-color: transparent;
+        padding: 40px 0;
+        @include rt-trs(0.34s);
+    }
+    &.rt-sticky {
+        &.rt-sticky-active {
+            .main-header {
+                padding: 20px 0;
+                background-color: tint($secondary-color, 10%);
+            }
+        }
+    }
+    .rt-nav-tolls {
+        >span {
+            >a {
+                color: #fff;
+                &:hover {
+                    color: $primary-color;
+                }
+            }
+            
+        }
+    }
+}

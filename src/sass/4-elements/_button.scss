@@ -296,6 +296,20 @@
         color: #fff;
     }
 }
+.rt-outline-gray {
+    border: 1px solid rgba(#000, 0.149);
+    color: #000;
+    .btn-revel-effects {
+        background: $primary-color;
+    }
+    color: #000;
+    &:hover,
+    &:focus,
+    &:active {
+        color: #000;
+    }
+}
+
 
 .rt-gradient {
     background: linear-gradient( 35deg, rgb(153, 50, 245) 0%, rgb(73, 51, 241) 53%, rgb(73, 80, 248) 70%, rgb(73, 108, 254) 100%);

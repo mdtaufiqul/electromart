@@ -63,28 +63,29 @@
         min-height: 351px;
         padding-left: 50px;
         justify-content: flex-end;
+        @include breakpoint(md){
+            padding-top: 50px;
+            margin-bottom: 30px;
+        }
         .icon-thumb{
             position: absolute;
             right: 30px;
             top: 75px;
+            @include breakpoint(md){
+                position: static;
+            }
+            @include breakpoint(lg){
+                img{
+                    height: 211px;
+                }
+            }
         }
         .iconbox-content{
             padding-bottom: 58px;
             .badge-1, .badge-2{
-                @include hw(58px);
-                background-repeat: no-repeat;
-                background-size: 100% 100%;
-                font-size: 14px;
-                text-align: center;
-                color: #fff;
                 margin-bottom: 37px;
             }
-            .badge-1{
-                background-image: url(../images/all-img/sp2.png);
-            }
-            .badge-2{
-                background-image: url(../images/all-img/sp3.png);
-            }
+            
             h4{
                 font-size: 25px;
                 text-transform: capitalize;
@@ -100,4 +101,27 @@
             }
         }
     }
+}
+
+.badge-1, .badge-2, .badge-3,.badge-4{
+    @include hw(58px);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    font-size: 14px;
+    text-align: center;
+    color: #fff;
+}
+.badge-1{
+    background-image: url(../images/all-img/sp2.png);
+}
+.badge-2{
+    background-image: url(../images/all-img/sp3.png);
+}
+.badge-3{
+    background-color: #fc4a1a;
+    border-radius: 50%;
+}
+.badge-4{
+    background-color: #079e40;
+    border-radius: 50%;
 }

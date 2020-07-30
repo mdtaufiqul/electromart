@@ -96,15 +96,7 @@ p {
     line-height: 26px;
 }
 
-.title-font {
-    font-family: $heading-font !important;
-}
-.body-font{
-    font-family: $body-font !important;
-}
-.text-font {
-    font-family: $body-font !important;
-}
+
 
 
 
@@ -114,10 +106,9 @@ p {
     font-size: 45px;
     margin: 0 0 20px;
     font-weight: 500;
-    line-height: 58px;
     display: inline-block;
     @include afterparent();
-    @include breakpoint(xs) {
+    @include breakpoint(lg) {
         font-size: 32px;
     }
     span {
@@ -125,7 +116,7 @@ p {
         display: block;
         font-size: 14px;
         text-transform: uppercase;
-        font-weight: 800;
+        letter-spacing: 1px;
         
         &.top{
             margin: 0 0 10px;
@@ -277,70 +268,16 @@ p {
 .badge-hilighit.color--2 {
     background: linear-gradient(8deg, #9932f5 0%, #7133f3 17%, #4933f1 45%, #4950f8 71%, #496cfe 100%);
 }
-.rt-section-title.title_restaurent{
-    font-size: 50px;
-    font-weight: 900;
-    @include breakpoint(xs){
-        font-size: 36px;
-    }
-}   
-
-@for $i from 0 through 100 {
-    .f-size-#{$i} {
-        font-size: $i + px;
-    }
+ 
+.title-font {
+    font-family: $heading-font !important;
 }
-
-@media (max-width: 1199.98px) {
-    @for $i from 0 through 100 {
-        .f-size-lg-#{$i} {
-            font-size: $i + px;
-        }
-    }
+.body-font{
+    font-family: $body-font !important;
 }
-
-@media (max-width: 991.98px) {
-    @for $i from 0 through 100 {
-        .f-size-md-#{$i} {
-            font-size: $i + px;
-        }
-    }
+.text-font {
+    font-family: $body-font !important;
 }
-
-@media (max-width: 767.98px) {
-    @for $i from 0 through 100 {
-        .f-size-xs-#{$i} {
-            font-size: $i + px;
-        }
-    }
-}
-
-@for $i from 0 through 100 {
-    .line-height-#{$i} {
-        line-height: $i + px;
-    }
-}
-
-@media (max-width: 1199.98px) {
-    @for $i from 0 through 100 {
-        .line-height-lg-#{$i} {
-            line-height: $i + px;
-        }
-    }
-}
-
-@media (max-width: 991.98px) {
-    @for $i from 0 through 100 {
-        .line-height-md-#{$i} {
-            line-height: $i + px;
-        }
-    }
-}
-
-@media (max-width: 767.98px) {
-    @for $i from 0 through 100 {
-        .line-height-xs-#{$i} {
-            line-height: $i + px;
-        }
-    }
+.font-circular{
+    font-family: 'Circular Std', sans-serif !important;
 }

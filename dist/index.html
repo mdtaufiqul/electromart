@@ -19,13 +19,13 @@
   <![endif]-->
 
     <header class="rt-site-header rt-sticky">
-        <div class="top-header">
+        <div class="top-header d-none d-md-block">
             <div class="custom-header-container container-fluid">
                 <div class="row no-gutters">
-                    <div class="col-md-6 text-center text-md-left">
+                    <div class="col-lg-6 text-center text-lg-left">
                         1st Time Buyer? Use ONE promocode to instantly get 10% OFF!
                     </div><!-- /.col-md-6 -->
-                    <div class="col-md-6 text-center text-md-right">
+                    <div class="col-lg-6 text-center text-lg-right">
                         <a href="tel:2223456888">Call us : (+12) 222 3456 888</a>
                     </div><!-- /.col-md-6 -->
                 </div><!-- /.row -->
@@ -34,12 +34,17 @@
         <div class="main-header">
             <div class="navbar">
                 <div class="custom-header-container container-fluid">
-                    <a href="index.html"><img src="assets/images/logo/logo.png" alt="logo_image"></a>
+                    <a href="index.html" class="brand-logo"><img src="assets/images/logo/logo.png" alt="logo_image"></a>
                     <div class="ml-auto d-flex align-items-center">
                         <div class="main-menu">
                             <span class="rt-mobile-menu-close"><i class="flaticon-cancel"></i></span><!-- /.rt-mobile-menu-close -->
                             <ul>
-                                <li class="current-menu-item"><a href="#">home</a></li>
+                                <li class="current-menu-item menu-item-has-children"><a href="#">home</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="index.html">home one</a></li>
+                                        <li><a href="index2.html">home Two</a></li>
+                                    </ul><!-- /.sub-menu -->
+                                </li>
                                 <li><a href="#">Shop</a></li>
                                 <li><a href="#">Collections</a></li>
                                 <li><a href="#">Blog</a></li>
@@ -49,6 +54,7 @@
                             </ul>
                         </div><!-- /.main-menu -->
                         <div class="rt-nav-tolls d-flex align-items-center">
+                            <div class="mobile-menu order-last"><span class="menu-click"><i class="flaticon-menu-3"></i></span></div><!-- /.mobile-menu -->
                             <span class="rt-search-open"><a href="javascript:void(0);"><i class="flaticon-search"></i></a></span>
                             <span class="open-user-ac"><a href="javascript:void(0);"><i class="flaticon-user"></i></a>
                             <span class="user-ac">
@@ -57,7 +63,6 @@
                             </span><!-- /.user-ac -->
                             </span>
                             <span class="d-inline  open-cart-opt"><a href="javascript:void(0);"><i class="flaticon-shopping-bag"></i></a></span>
-                            <div class="mobile-menu"><span class="menu-click"><i class="flaticon-menu-3"></i></span></div><!-- /.mobile-menu -->
                         </div><!-- /.rt-nav-tolls -->
                     </div><!-- /.ml-auto -->
                 </div><!-- /.container -->
@@ -65,45 +70,44 @@
         </div><!-- /.main-header -->
     </header>
 
-    <!-- banner area start -->
-    <section class="rt-banner-area">
-        <div class="rt-slider-active">
-            <div class="single-rt-banner rt-banner-height rtbgprefix-cover" style="background-image: url(assets/images/slider/bg-1.jpg);">
-                <span class="numbercount"></span>
-                <div class="container-fluid">
-                    <div class="row  rt-banner-height align-items-center">
-                        <div class="col-lg-5">
-                            <div class="rt-banner-content">
-                                <h1 class="cssanimation sequence animated" data-animation-in=" rtleFadeInLeft"> We Make Your Home Better</h1>
-                                <p class="animated" data-animation-in="fadeInUp" data-duration-in="1s">Lorem ipsum dolor sit amet, consectetur adipis cing elit. </p>
-                                <p class="animated rt-mt-86" data-animation-in="fadeInDown" data-duration-in="1s">
-                                    <a href="#" class="rt-btn rt-primary multipule-color-strep pill text-uppercase">Discover</a>
-                                </p>
-                            </div><!-- end banner content -->
-                        </div><!-- end column -->
-                    </div><!-- end row -->
-                </div><!-- end container -->
-                <div class="product-image"><img src="assets/images/slider/p-1.png" alt=""></div><!-- /.product-image -->
-            </div><!-- end single rt banner -->
-            <div class="single-rt-banner rt-banner-height rtbgprefix-cover" style="background-image: url(assets/images/slider/bg-1.jpg);">
-                <span class="numbercount"></span>
-                <div class="container-fluid">
-                    <div class="row  rt-banner-height align-items-center">
-                        <div class="col-lg-5">
-                            <div class="rt-banner-content">
-                                <h1 class="cssanimation sequence animated" data-animation-in=" rtleFadeInLeft"> We Make Your Home Better</h1>
-                                <p class="animated" data-animation-in="fadeInUp" data-duration-in="1s">Lorem ipsum dolor sit amet, consectetur adipis cing elit. </p>
-                                <p class="animated rt-mt-86" data-animation-in="fadeInDown" data-duration-in="1s">
-                                    <a href="#" class="rt-btn rt-primary multipule-color-strep pill text-uppercase">Discover</a>
-                                </p>
-                            </div><!-- end banner content -->
-                        </div><!-- end column -->
-                    </div><!-- end row -->
-                </div><!-- end container -->
-                <div class="product-image"><img src="assets/images/slider/p-1.png" alt=""></div><!-- /.product-image -->
-            </div><!-- end single rt banner -->
-        </div><!-- /.rt-slider-active -->
-    </section>
+    <div class="container-fluid custom-header-container">
+        <div class="row">
+            <div class="col-12">
+                <div class="rt-slider-active dot-1 prevnext-1">
+                    <div class="single-rt-banner rt-banner-height rtbgprefix-cover" style="background-image: url(assets/images/slider/bg-1.jpg);">
+                        <span class="numbercount"></span>
+                        <div class="row  rt-banner-height align-items-center">
+                            <div class="col-xl-5 col-lg-6">
+                                <div class="rt-banner-content">
+                                    <h1 class="cssanimation sequence animated" data-animation-in=" rtleFadeInLeft"> We Make Your Home Better</h1>
+                                    <p class="animated" data-animation-in="fadeInUp" data-duration-in="1s">Lorem ipsum dolor sit amet, consectetur adipis cing elit. </p>
+                                    <p class="animated rt-mt-86" data-animation-in="fadeInDown" data-duration-in="1s">
+                                        <a href="#" class="rt-btn rt-primary multipule-color-strep pill text-uppercase">Discover</a>
+                                    </p>
+                                </div><!-- end banner content -->
+                            </div><!-- end column -->
+                        </div><!-- end row -->
+                        <div class="product-image"><img src="assets/images/slider/p-1.png" alt=""></div><!-- /.product-image -->
+                    </div><!-- /.single-rt-banner  -->
+                    <div class="single-rt-banner rt-banner-height rtbgprefix-cover" style="background-image: url(assets/images/slider/bg-1.jpg);">
+                        <span class="numbercount"></span>
+                        <div class="row  rt-banner-height align-items-center">
+                            <div class="col-xl-5 col-lg-6">
+                                <div class="rt-banner-content">
+                                    <h1 class="cssanimation sequence animated" data-animation-in=" rtleFadeInLeft"> We Make Your Home Better</h1>
+                                    <p class="animated" data-animation-in="fadeInUp" data-duration-in="1s">Lorem ipsum dolor sit amet, consectetur adipis cing elit. </p>
+                                    <p class="animated rt-mt-86" data-animation-in="fadeInDown" data-duration-in="1s">
+                                        <a href="#" class="rt-btn rt-primary multipule-color-strep pill text-uppercase">Discover</a>
+                                    </p>
+                                </div><!-- end banner content -->
+                            </div><!-- end column -->
+                        </div><!-- end row -->
+                        <div class="product-image"><img src="assets/images/slider/p-1.png" alt=""></div><!-- /.product-image -->
+                    </div><!-- /.single-rt-banner  -->
+                </div><!-- /.rt-slider-active -->
+            </div><!-- /.col-12 -->
+        </div><!-- /.row -->
+    </div><!-- /.rt-container -->
 
     <!-- feature area start -->
     <section class="feature-area">
@@ -147,7 +151,7 @@
                         <li data-filter=".cat-3">Pillows & Throws</li>
                         <li data-filter=".cat-4">Wall Décor</li>
                     </ul>
-                    <div class="mobile-filter d-none">
+                    <div class="mobile-filter">
                         <span class="filter-click">Filter</span>
                         <ul class="filter-list">
                             <li data-filter="*" class="active">All</li>
@@ -161,7 +165,7 @@
             </div><!-- /.row -->
             <div class="rt-spacer-20"></div><!-- /.rt-space-30 -->
             <div class="row grid">
-                <div class="col-lg-3 rt-mb-30 grid-item cat-1">
+                <div class="col-lg-3 col-md-6 rt-mb-30 grid-item cat-1">
                     <div class="rt-single-icon-box icon-center main-product">
                         <a class="icon-thumb" href="#">
                             <img src="assets/images/all-img/p-1.png" alt="" class="front-image">
@@ -173,10 +177,11 @@
                             <p><span class="primary-color">$119.00</span></p>
                         </div><!-- /.iconbox-content -->
                     </div><!-- /.rt-single-icon-box -->
-                </div><!-- /.col-lg-3 -->
-                <div class="col-lg-3 rt-mb-30 grid-item cat-2 cat-3 cat-1">
+                </div><!-- /.col-lg-3 col-md-6 -->
+                <div class="col-lg-3 col-md-6 rt-mb-30 grid-item cat-2 cat-3 cat-1">
                     <div class="rt-single-icon-box icon-center main-product">
                         <a class="icon-thumb" href="#">
+                            <div class="badge-2">50%</div><!-- /.badge-1 -->
                             <img src="assets/images/all-img/p-2.png" alt="" class="front-image">
                             <img src="assets/images/all-img/pc-1.png" alt="" class="back-image">
                         </a><!-- /.icon-thumb -->
@@ -186,8 +191,8 @@
                             <p><span class="primary-color">$119.00</span></p>
                         </div><!-- /.iconbox-content -->
                     </div><!-- /.rt-single-icon-box -->
-                </div><!-- /.col-lg-3 -->
-                <div class="col-lg-3 rt-mb-30 grid-item cat-4 cta-3">
+                </div><!-- /.col-lg-3 col-md-6 -->
+                <div class="col-lg-3 col-md-6 rt-mb-30 grid-item cat-4 cta-3">
                     <div class="rt-single-icon-box icon-center main-product">
                         <a class="icon-thumb" href="#">
                             <img src="assets/images/all-img/p-3.png" alt="" class="front-image">
@@ -198,10 +203,11 @@
                             <p><span class="primary-color">$119.00</span></p>
                         </div><!-- /.iconbox-content -->
                     </div><!-- /.rt-single-icon-box -->
-                </div><!-- /.col-lg-3 -->
-                <div class="col-lg-3 rt-mb-30 grid-item cat-1 cat-4">
+                </div><!-- /.col-lg-3 col-md-6 -->
+                <div class="col-lg-3 col-md-6 rt-mb-30 grid-item cat-1 cat-4">
                     <div class="rt-single-icon-box icon-center main-product">
                         <a class="icon-thumb" href="#">
+                            <div class="badge-1">new</div><!-- /.badge-1 -->
                             <img src="assets/images/all-img/p-4.png" alt="" class="front-image">
                         </a><!-- /.icon-thumb -->
                         <div class="iconbox-content">
@@ -210,8 +216,8 @@
                             <p><span class="primary-color">$119.00</span></p>
                         </div><!-- /.iconbox-content -->
                     </div><!-- /.rt-single-icon-box -->
-                </div><!-- /.col-lg-3 -->
-                <div class="col-lg-3 rt-mb-30 grid-item cat-1">
+                </div><!-- /.col-lg-3 col-md-6 -->
+                <div class="col-lg-3 col-md-6 rt-mb-30 grid-item cat-1">
                     <div class="rt-single-icon-box icon-center main-product">
                         <a class="icon-thumb" href="#">
                             <img src="assets/images/all-img/p-1.png" alt="" class="front-image">
@@ -223,10 +229,11 @@
                             <p><span class="primary-color">$119.00</span></p>
                         </div><!-- /.iconbox-content -->
                     </div><!-- /.rt-single-icon-box -->
-                </div><!-- /.col-lg-3 -->
-                <div class="col-lg-3 rt-mb-30 grid-item cat-2 cat-3 cat-1">
+                </div><!-- /.col-lg-3 col-md-6 -->
+                <div class="col-lg-3 col-md-6 rt-mb-30 grid-item cat-2 cat-3 cat-1">
                     <div class="rt-single-icon-box icon-center main-product">
                         <a class="icon-thumb" href="#">
+                            <div class="badge-1">new</div><!-- /.badge-1 -->
                             <img src="assets/images/all-img/p-2.png" alt="" class="front-image">
                             <img src="assets/images/all-img/pc-1.png" alt="" class="back-image">
                         </a><!-- /.icon-thumb -->
@@ -236,8 +243,8 @@
                             <p><span class="primary-color">$119.00</span></p>
                         </div><!-- /.iconbox-content -->
                     </div><!-- /.rt-single-icon-box -->
-                </div><!-- /.col-lg-3 -->
-                <div class="col-lg-3 rt-mb-30 grid-item cat-4 cta-3">
+                </div><!-- /.col-lg-3 col-md-6 -->
+                <div class="col-lg-3 col-md-6 rt-mb-30 grid-item cat-4 cta-3">
                     <div class="rt-single-icon-box icon-center main-product">
                         <a class="icon-thumb" href="#">
                             <img src="assets/images/all-img/p-3.png" alt="" class="front-image">
@@ -248,10 +255,11 @@
                             <p><span class="primary-color">$119.00</span></p>
                         </div><!-- /.iconbox-content -->
                     </div><!-- /.rt-single-icon-box -->
-                </div><!-- /.col-lg-3 -->
-                <div class="col-lg-3 rt-mb-30 grid-item cat-1 cat-4">
+                </div><!-- /.col-lg-3 col-md-6 -->
+                <div class="col-lg-3 col-md-6 rt-mb-30 grid-item cat-1 cat-4">
                     <div class="rt-single-icon-box icon-center main-product">
                         <a class="icon-thumb" href="#">
+                            <div class="badge-2">50%</div><!-- /.badge-1 -->
                             <img src="assets/images/all-img/p-4.png" alt="" class="front-image">
                         </a><!-- /.icon-thumb -->
                         <div class="iconbox-content">
@@ -260,7 +268,7 @@
                             <p><span class="primary-color">$119.00</span></p>
                         </div><!-- /.iconbox-content -->
                     </div><!-- /.rt-single-icon-box -->
-                </div><!-- /.col-lg-3 -->
+                </div><!-- /.col-lg-3 col-md-6 -->
             </div><!-- /.row -->
             <div class="row">
                 <div class="col-12 text-center">
@@ -376,13 +384,13 @@
                     <div class="cta-inner">
                         <div class="cta-logo"><img src="assets/images/all-img/cta-2.png" alt=""></div><!-- /.cta-logo -->
                         <div class="row">
-                            <div class="col-md-4 align-self-end">
+                            <div class="col-lg-4 align-self-end rt-mb-30">
                                 <h4>Upcoming <br> Collections</h4>
                             </div><!-- /.col-md-4 -->
-                            <div class="col-md-4 align-self-center">
+                            <div class="col-lg-4 align-self-center rt-mb-30">
                                 <img src="assets/images/all-img/cta-image.png" alt="">
                             </div><!-- /.col-md-4 -->
-                            <div class="col-md-4 align-self-end text-center">
+                            <div class="col-lg-4 align-self-end text-center rt-mb-30">
                                 <a href="#" class="rt-btn text-capitalize pill rt-primary rt-sm">Discover</a>
                             </div><!-- /.col-md-4 -->
                         </div><!-- /.row -->
@@ -396,7 +404,7 @@
         <div class="rt-container">
             <div class="row">
                 <div class="col-12">
-                    <h2 class="rt-section-title">Our Blog</h2>
+                    <h2 class="rt-section-title font-circular">Our Blog</h2>
                 </div><!-- /.col-12 -->
             </div><!-- /.row -->
             <div class="rt-spacer-20"></div><!-- /.rt-spacer-30 -->
@@ -418,6 +426,7 @@
                             <div class="entry-footer">
                                 <a href="#">Read More</a>
                             </div>
+                        </div>
                     </article><!-- end article -->
                 </div><!-- /.col-lg-4 col-md-6 mx-auto rt-mb-30 -->
                 <div class="col-lg-4 col-md-6 mx-auto rt-mb-30">
@@ -437,11 +446,12 @@
                             <div class="entry-footer">
                                 <a href="#">Read More</a>
                             </div>
+                        </div>
                     </article><!-- end article -->
                 </div><!-- /.col-lg-4 col-md-6 mx-auto rt-mb-30 -->
                 <div class="col-lg-4 col-md-6 mx-auto rt-mb-30">
                     <article class="single-home-blog ">
-                        <div class="rt-post-thumbnail"><img src="assets/images/all-img/blg-3.png" alt=""></a>
+                        <div class="rt-post-thumbnail"><a href="#"><img src="assets/images/all-img/blg-3.png" alt=""></a>
                         </div>
                         <div class="entry-content">
                             <header class="entry-header">
@@ -455,6 +465,7 @@
                             <div class="entry-footer">
                                 <a href="#">Read More</a>
                             </div>
+                        </div>
                     </article><!-- end article -->
                 </div><!-- /.col-lg-4 col-md-6 mx-auto rt-mb-30 -->
             </div><!-- /.row -->
@@ -465,7 +476,7 @@
         <div class="footer-top">
             <div class="rt-container">
                 <div class="row">
-                    <div class="col-md-3">
+                    <div class="col-lg-3 col-md-6 text-center text-md-left">
                         <div class="rt-single-widget">
                             <ul class="footer-social rt-list">
                                 <li class="d-inline-block"><a href="#"><i class="icofont-instagram"></i></a></li>
@@ -474,7 +485,7 @@
                             </ul><!-- /.footer-social -->
                         </div><!-- /.rt-single-widget -->
                     </div><!-- /.col-lg-3 -->
-                    <div class="col-md-6">
+                    <div class="col-lg-6 col-md-10 mx-md-auto">
                         <div class="rt-single-widget text-center">
                             <span class="d-block rt-mb-10 email-icon"><i class="flaticon-email"></i></span>
                             <h3 class="rt-footer-title">Newsletter Signup</h3>
@@ -489,8 +500,8 @@
                             </form><!-- /.footer-subscribe -->
                         </div><!-- /.rt-single-widget -->
                     </div><!-- /.col-md-6 -->
-                    <div class="col-md-3">
-                        <div class="rt-single-widget text-right">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="rt-single-widget text-md-right text-center">
                             <a href="#"><img src="assets/images/all-img/cart-1.png" alt=""></a>
                             <a href="#"><img src="assets/images/all-img/cart-2.png" alt=""></a>
                             <a href="#"><img src="assets/images/all-img/cart-3.png" alt=""></a>
@@ -500,7 +511,7 @@
             </div><!-- /.container -->
         </div><!-- /.footer-top -->
         <div class="footer-bottom">
-            <div class="container">
+            <div class="rt-container">
                 <div class="row">
                     <div class="col-12 text-center">
                         <ul class="footer-menu rt-list">
@@ -678,6 +689,40 @@
 
     <div class="cart-overlay"></div><!-- ./ rt overlay -->
     <div class="rt-mobile-menu-overlay"></div><!-- /.rt-mobile-menu-overlay -->
+
+    <aside class="rt-sidnav" id="rt-sidnavac">
+        <div class="sidenav-close mb-5">
+            <i class="icofont-close"></i>
+        </div><!-- ./ sidenavclose -->
+        <div class="brand-logo rt-mb-30  rt-mt-100">
+            <a href="index.html"><img src="assets/images/logo/logo2.png" alt="site_logo"></a>
+        </div><!-- /.brand-logo -->
+        <div class="offcanvas-menu">
+            <ul>
+                <li class="current-menu-item menu-item-has-children"><a href="#">home</a>
+                    <ul class="sub-menu">
+                        <li><a href="index.html">home one</a></li>
+                        <li><a href="index2.html">home Two</a></li>
+                    </ul><!-- /.sub-menu -->
+                </li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Collections</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Pages</a></li>
+                <li><a href="#">About Us </a></li>
+                <li><a href="#">Elements</a></li>
+            </ul>
+        </div><!-- /.offcanvas-menu -->
+        <div class="fixed-social">
+            <ul class="rt-list text-center">
+                <li class="d-inline-block"><a href="#" class=""> <i class="icofont-facebook"></i></a></li>
+                <li class="d-inline-block"><a href="#" class=""> <i class="icofont-twitter"></i></a></li>
+                <li class="d-inline-block"><a href="#" class=""> <i class="icofont-skype"></i></a></li>
+                <li class="d-inline-block"><a href="#" class=""> <i class="icofont-pinterest"></i></a></li>
+            </ul>
+        </div><!-- /.fixed-social -->
+    </aside>
+    <div class="rt-overlay"></div><!-- ./ rt overlay -->
 
 </body>
 </html>

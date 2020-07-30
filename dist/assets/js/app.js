@@ -1,12 +1,12 @@
 "use strict";
 
 /*
-* ----------------------------------------------------------------------------------------
-    Template Name: mr stater
-    Template URI: https://spellbit.com/
+
+    Template Name: 
+    Template URI: 
     Description: 
-    Author: mahedi amin
-    Author URI: https://mahediamin.com
+    Author: 
+    Author URI: 
     Version: 1.0.0
 
 
@@ -28,15 +28,14 @@
    14. Select Two Activation
    15. Paralx Init
 
-* ----------------------------------------------------------------------------------------
 */
 !function ($) {
   'use strict';
 
   jQuery(document).on("ready", function () {
-    /*---------------====================
-    01.Mobile Menu 
-    ================-------------------*/
+    /*
+     01.Mobile Menu 
+    */
     if ($(window).width() < 991.98) {
       $(".menu-item-has-children > a").on("click", function () {
         var element = $(this).parent("li");
@@ -56,8 +55,26 @@
           element.siblings("li").find("ul").slideUp();
         }
       });
-    } // menu menu active link
+    }
 
+    $(".offcanvas-menu ul  li.menu-item-has-children > a").on("click", function () {
+      var element = $(this).parent("li");
+
+      if (element.hasClass("open")) {
+        element.removeClass("open");
+        element.find("li").removeClass("open");
+        element.find("ul").slideUp(500, "linear");
+        element.find(".rt-mega-menu").slideUp(500, "linear");
+      } else {
+        element.addClass("open");
+        element.children("ul").slideDown(500, "linear");
+        element.children(".rt-mega-menu").slideDown(500, "linear");
+        element.siblings("li").children("ul").slideUp();
+        element.siblings("li").removeClass("open");
+        element.siblings("li").find("li").removeClass("open");
+        element.siblings("li").find("ul").slideUp();
+      }
+    }); // menu menu active link
 
     $(".main-menu ul li").on("click", function () {
       $(".main-menu ul li").removeClass("active");
@@ -96,9 +113,9 @@
       $(".navbar-collapse").removeClass("show");
       $(".navbar-toggler").removeClass("cg");
     });
-    /*---------------====================
-    02.Sticky Menu
-    ================-------------------*/
+    /*
+       02.Sticky Menu
+      */
 
     function stickyHeader() {
       var mainheader = $('.rt-sticky'),
@@ -155,11 +172,11 @@
         });
       }
     });
-    /*---------------====================
-    03.All  Slider
-    ================-------------------*/
+    /*
+      03.All  Slider
+     */
 
-    var $status = $('.numbercount');
+    var $status = $('.numbercount, .numbercount2');
     var $slickElement = $('.rt-slider-active');
     $slickElement.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
       //currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
@@ -173,9 +190,19 @@
         autoplay: false,
         fade: true,
         infinite: true,
-        arrows: false,
+        arrows: true,
         dots: true
       }).slickAnimation();
+    }
+
+    if ($(".testimonials-active").length > 0) {
+      $('.testimonials-active').slick({
+        slidesToShow: 1,
+        autoplay: false,
+        infinite: true,
+        arrows: false,
+        dots: true
+      });
     }
 
     if ($(".brands-active").length > 0) {
@@ -226,9 +253,40 @@
         }]
       });
     }
-    /*---------------====================
-    04.Offcanvas
-    ================-------------------*/
+
+    if ($(".catagory-active").length > 0) {
+      $('.catagory-active').slick({
+        infinite: true,
+        slidesToShow: 4,
+        slidesToScroll: 2,
+        pauseOnHover: true,
+        swipeToSlide: true,
+        arrows: true,
+        dots: false,
+        responsive: [{
+          breakpoint: 1199,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1
+          }
+        }, {
+          breakpoint: 980,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1
+          }
+        }, {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }]
+      });
+    }
+    /*
+      04.Offcanvas
+     */
 
 
     $(".open-offcanvasmenu").on("click", function () {
@@ -247,19 +305,19 @@
       $(".rt-cart-box, .cart-overlay").removeClass("active");
       $("body").removeClass("cartboxopen");
     });
-    $(".rt-sidnav, .rt-cart-box, .cart-products").overlayScrollbars({//className: "os-theme-light",
+    $(".rt-sidnav, .rt-cart-box, .cart-products, .offcanvas-menu").overlayScrollbars({//className: "os-theme-light",
     });
-    /*---------------====================
+    /*
       05.Counter
-      ================-------------------*/
+     */
 
     $('.counter').counterUp({
       delay: 10,
       time: 5000
     });
-    /*---------------====================
+    /*
       06.scroll up
-      ================-------------------*/
+     */
 
     $.scrollUp({
       scrollText: '<i class="fa fa-angle-up"></i>',
@@ -267,9 +325,9 @@
       animation: 'slide',
       easingType: 'easeInQuint'
     });
-    /*---------------====================
-    07.Magnify active
-    ================-------------------*/
+    /*
+      07.Magnify active
+     */
 
     $('.playVideo').magnificPopup({
       type: 'iframe',
@@ -282,18 +340,18 @@
         enabled: true
       }
     });
-    /*---------------====================
+    /*
       08.Preloder Active
-      ================-------------------*/
+     */
 
     if ($(".rt-preloder").length > 0) {
       jQuery(window).load(function () {
         jQuery(".rt-preloder").fadeOut(300);
       });
     }
-    /*---------------====================
-    09.WOW Active
-    ================-------------------*/
+    /*
+         09.WOW Active
+    */
 
 
     if ($('.wow').length) {
@@ -312,27 +370,11 @@
       wow.init();
     }
     /*
-      ==========================================
-     10. PROGRESSBAR ACTIVATION
-      ==========================================
-      */
-
-
-    $(".progress").each(function () {
-      var e = $(this).attr("data-percent"),
-          t = $(this).prev(".progress-title"),
-          a = $(this).children(".progress-title");
-      t.length > 0 ? t.css("width", e) : a.length > 0 && a.css("width", e), $(this).appear(function () {
-        $(this).find(".progress-bar").animate({
-          width: e
-        }, 500);
-      });
-    });
-    /*
             ==========================================
          11. Tooltip activation
           ==========================================
           */
+
 
     $('[data-toggle="tooltip"]').tooltip();
     tippy.setDefaults({
@@ -358,9 +400,9 @@
       }
     });
     $(".amount").val("$" + $(".slider-range").slider("values", 0) + " - $" + $(".slider-range").slider("values", 1));
-    /*---------------====================
+    /*
             13. Filter Acitve
-            ================-------------------*/
+           */
 
     $('.grid').imagesLoaded(function () {
       var $grid = $('.grid').isotope({
@@ -371,6 +413,9 @@
           columnWidth: 0
         }
       });
+    });
+    $(".filter-click").on("click", function () {
+      $(".mobile-filter .filter-list").slideToggle("active-filter");
     });
     $('.filter-list').on('click', 'li', function () {
       $('.filter-list li').removeClass('active');
@@ -423,38 +468,5 @@
     }
 
     initparallax();
-    $(".single-rt-banner").mousemove(function (e) {// parallaxIt(e, ".leave_move_1", 30);
-      // parallaxIt(e, ".leave_move_2", 40);
-      // parallaxIt(e, ".leave_move_3", -50);
-      // parallaxIt(e, ".text_move_1", -20);
-    });
-
-    function parallaxIt(e, target, movement) {
-      var $this = $(".single-rt-banner");
-      var relX = e.pageX - $this.offset().left;
-      var relY = e.pageY - $this.offset().top;
-      TweenMax.to(target, 1, {
-        x: (relX - $this.width() / 2) / $this.width() * movement,
-        y: (relY - $this.height() / 2) / $this.height() * movement
-      });
-    }
-
-    if ($(".simply-countdown-one").length > 0) {
-      simplyCountdown('.simply-countdown-one', {
-        year: "2020",
-        month: "12",
-        day: "07",
-        words: {
-          //words displayed into the countdown
-          days: 'days',
-          hours: 'hours',
-          minutes: 'minutes',
-          seconds: 'seconds'
-        },
-        plural: false,
-        //use plurals
-        zeroPad: true
-      });
-    }
   });
 }(jQuery);

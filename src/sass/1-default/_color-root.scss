@@ -25,7 +25,9 @@ a.secondary-color {
 .secondary-color-bg {
     background-color: $secondary-color;
 }
-
+.bg-color-1{
+    background-color: #e4e9e4;
+}
 
 
 
@@ -42,7 +44,9 @@ a.heading-font-color {
         color: $primary-color;
     }
 }
-
+.text-success{
+    color: $button-ssucess;
+}
 // text gradinet color 
 .text-gradinet-1 {
     background: $gradient-primary;

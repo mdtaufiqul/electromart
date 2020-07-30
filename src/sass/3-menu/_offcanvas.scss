@@ -6,30 +6,27 @@
 
   span {
     display: block;
-    background: #999;
-    width: 30px;
+    background: #fff;
+    width: 23px;
     margin-bottom: 5px;
     height: 2px;
+    margin-left: auto;
     transition: all 0.12s ease-in-out;
+    &:nth-child(1) {
+      width: 15px;
+    }
+
+    &:nth-child(3) {
+      width: 10px;
+    }
   }
 
   &:hover span {
     background: $primary-color;
-
-    &:nth-child(1) {
-      margin-bottom: 8px;
-    }
-
-    &:nth-child(2) {
-      position: relative;
-      width: 20px;
-      margin-left: 5px;
-    }
-
-    &:nth-child(3) {
-      margin-top: 8px;
-    }
   }
+}
+.offcanvas-menu{
+  height: calc(100% - 240px);
 }
 
 .rt-sidnav {
@@ -95,5 +92,59 @@
   margin-top: 50px;
   padding-bottom: 30px;
   width: 100%;
+  ul{
+    li{
+      a{
+        display: block;
+        margin: 0 5px;
+        color: $body-font-colr;
+        &:hover{
+          color: $secondary-color;
+        }
+      }
+    }
+  }
 }
 
+.rt-gloabl-mobile-nav {
+  position: fixed;
+  right: 0;
+  top: 0;
+  background-color: #fff;
+  width: 35vw;
+  z-index: -1;
+  height: 100%;
+  padding: 30px;
+  box-shadow: 0px 24px 35px 0px rgba(153, 153, 153, 0.15);
+  transition: all 0.7s cubic-bezier(0.2, 1, 0.3, 1);
+  @include hidden();
+
+  &.active-mobile-menu {
+    @include vis();
+    z-index: 99;
+  }
+}
+
+@media only screen and (max-width: 990px) {
+  .rt-gloabl-mobile-nav {
+    width: 420px;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .rt-gloabl-mobile-nav {
+    width: 400px;
+  }
+}
+
+@media only screen and (max-width: 479px) {
+  .rt-gloabl-mobile-nav {
+    width: calc(100vw - 60px);
+  }
+}
+
+@media only screen and (max-width: 410px) {
+  .rt-gloabl-mobile-nav {
+    width: calc(100vw - 35px);
+  }
+}

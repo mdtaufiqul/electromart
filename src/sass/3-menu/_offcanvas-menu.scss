@@ -1,0 +1,94 @@
+.offcanvas-menu {
+    ul {
+        margin: 0;
+        padding: 0;
+        padding-right: 15px;
+        list-style: none;
+        >li {
+            display: block;
+            position: relative;
+            z-index: 1;
+            >a {
+                display: block;
+                font-size: 16px;
+                font-weight: 500;
+                text-transform: uppercase;
+                color: #000;
+                border-bottom: 1px solid rgba(238, 238, 238, 0.5);
+                padding: 15px 0;
+            }
+            &:hover>a {
+                color: $secondary-color;
+            }
+            &:last-child>a {
+                border-bottom: none;
+                padding-bottom: 0px;
+            }
+            &.menu-item-has-children ul.sub-menu {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                padding-left: 25px;
+                display: none;
+            }
+        }
+        ul ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            padding-left: 25px;
+            display: none;
+            li {
+                display: block;
+                a {
+                    font-size: 14px;
+                    font-weight: 400;
+                    color: #000;
+                    text-transform: uppercase;
+                    padding: 15px 0;
+                    display: block;
+                }
+                &:hover a {
+                    color: $secondary-color;
+                }
+                &:last-child a {
+                    padding-bottom: 0px;
+                }
+            }
+        }
+        >li.menu-item-has-children ul.sub-menu li {
+            display: block;
+        }
+        >li.menu-item-has-children ul.sub-menu li a {
+            font-size: 14px;
+            font-weight: 400;
+            color: #000;
+            text-transform: uppercase;
+            padding: 15px 0;
+            display: block;
+        }
+        >li.menu-item-has-children ul.sub-menu li:hover a {
+            color: $secondary-color;
+        }
+        >li.menu-item-has-children ul.sub-menu li:last-child a {
+            padding-bottom: 0px;
+        }
+        >li.menu-item-has-children {
+            >a:after {
+                position: absolute;
+                right: 0px;
+                content: '\eab2';
+                font-family: 'icofont';
+                color: #000;
+                font-size: 16px;
+            }
+            &:hover>a:after {
+                color: $secondary-color;
+            }
+            &.open>a:after {
+                content: '\eab9';
+            }
+        }
+    }
+    height: calc(100% - 240px);
+}
